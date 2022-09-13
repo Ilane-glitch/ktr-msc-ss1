@@ -62,4 +62,15 @@ public class CharacterTest {
         c.moveForward();
         c.moveBack();
     }
+
+    @Test
+    public void WalkTest_2()
+    {
+        mage m = new mage();
+        warrior w = new warrior();
+        m.moveLeft();
+        m.moveBack();
+        w.moveRight();
+        w.moveForward();
+    }
 }

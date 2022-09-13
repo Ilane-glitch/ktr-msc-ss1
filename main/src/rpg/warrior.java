@@ -17,6 +17,34 @@ public class warrior extends character{
         System.out.println(this.getName()+" : contemple ma force !");
     }
 
+    @Override
+    public void moveRight()
+    {
+        System.out.println(this.getName()+ " se déplace sur la droite de façon virile.");
+    }
+
+    @Override
+    public void moveLeft()
+    {
+        System.out.println(this.getName()+ " se déplace sur la gauche de façon virile.");
+
+    }
+
+    @Override
+    public void moveForward()
+    {
+        System.out.println(this.getName()+ " avance de quelques pas de façon virile.");
+
+    }
+
+    @Override
+    public void moveBack()
+    {
+        System.out.println(this.getName()+ " recule de quelques pas de façon virile.");
+
+    }
+
+
     /** metthode **/
     @Override
     public void attack(String weapon) // methode attaque rééecrite au besoin
