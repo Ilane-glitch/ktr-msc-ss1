@@ -1,6 +1,6 @@
-package rpg;
+package src.rpg;
 
-public class mage extends character{
+public class mage extends character {
 
     /** Constructeur **/
     public mage(){}

@@ -1,4 +1,4 @@
-package rpg;
+package src.rpg;
 
 public class character implements movable{
 

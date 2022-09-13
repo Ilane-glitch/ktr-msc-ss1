@@ -1,4 +1,4 @@
-package rpg;
+package src.rpg;
 
 public interface movable {
     void moveRight();

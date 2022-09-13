@@ -1,5 +1,7 @@
+package character;
+
 import org.testng.annotations.Test;
-import rpg.*;
+import src.rpg.*;
 
 public class CharacterTest {
 
