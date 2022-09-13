@@ -50,4 +50,14 @@ public class CharacterTest {
         System.out.println(w.getStrength());
         System.out.println(w.getWit());
     }
+
+    @Test
+    public void WalkTest()
+    {
+        character c = new character();
+        c.moveLeft();
+        c.moveRight();
+        c.moveForward();
+        c.moveBack();
+    }
 }

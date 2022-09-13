@@ -1,6 +1,6 @@
 package rpg;
 
-public class character {
+public class character implements movable{
 
     /** @name : le nom du personnage **/
     private String name;
@@ -34,6 +34,32 @@ public class character {
         System.out.println(this.getName() + ": voici mon coup de "+ weapon);
     }
 
+    @Override
+    public void moveRight()
+    {
+        System.out.println(this.getName()+ " se déplace sur la droite.");
+    }
+
+    @Override
+    public void moveLeft()
+    {
+        System.out.println(this.getName()+ " se déplace sur la gauche.");
+
+    }
+
+    @Override
+    public void moveForward()
+    {
+        System.out.println(this.getName()+ " avance de quelques pas.");
+
+    }
+
+    @Override
+    public void moveBack()
+    {
+        System.out.println(this.getName()+ " recule de quelques pas.");
+
+    }
     /** Setter **/
     public void setName(String name) {
         this.name = name;
