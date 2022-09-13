@@ -2,14 +2,22 @@ package rpg;
 
 public class character {
 
+    /** @name : le nom du personnage **/
     private String name;
+    /** @rpgClass : la classe du personnage**/
     private String rpgClass;
+    /**
+     * @life : la vie du personnage
+     * @strength : la force du personnage
+     * @agility : son agilité
+     * @wit : son intelligence
+     **/
     private int life, strength, agility, wit;
 
     /** constructeur**/
-    public character(){}
+    public character(){} // constrcteur vide
 
-    public character(String name, String rpgClass)
+    public character(String name, String rpgClass) // cnstructeur générique
     {
         this.setName(name);
         this.setRpgClass(rpgClass);
@@ -21,9 +29,9 @@ public class character {
 
     /** methodes **/
 
-    public void attack(String natk)
+    public void attack(String weapon) // méthode attaque -> ovveridable selon besoin
     {
-        System.out.println(this.getName() + ": voici mon attaque finale : "+ natk);
+        System.out.println(this.getName() + ": voici mon coup de "+ weapon);
     }
 
     /** Setter **/
