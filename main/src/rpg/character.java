@@ -35,7 +35,7 @@ public class character implements movable{
     }
 
     @Override
-    public void moveRight()
+    public void moveRight() // adaptation de la methode de deplacement pour le personnage
     {
         System.out.println(this.getName()+ " se déplace sur la droite.");
     }
@@ -44,22 +44,25 @@ public class character implements movable{
     public void moveLeft()
     {
         System.out.println(this.getName()+ " se déplace sur la gauche.");
-
     }
 
     @Override
     public void moveForward()
     {
         System.out.println(this.getName()+ " avance de quelques pas.");
-
     }
 
     @Override
     public void moveBack()
     {
         System.out.println(this.getName()+ " recule de quelques pas.");
-
     }
+
+    public void degainage() // methode pour degainer son arme non overloadable
+    {
+        System.out.println(this.getName() + " dégaine son arme.");
+    }
+
     /** Setter **/
     public void setName(String name) {
         this.name = name;

@@ -73,4 +73,14 @@ public class CharacterTest {
         w.moveRight();
         w.moveForward();
     }
+
+    @Test
+    public void DegTest()
+    {
+        mage m = new mage();
+        warrior w = new warrior();
+
+        m.degainage();
+        w.degainage();
+    }
 }

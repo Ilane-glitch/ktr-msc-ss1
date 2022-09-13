@@ -18,7 +18,7 @@ public class warrior extends character{
     }
 
     @Override
-    public void moveRight()
+    public void moveRight() // adaptation de la methode de deplacement pour le guerrier
     {
         System.out.println(this.getName()+ " se déplace sur la droite de façon virile.");
     }
@@ -27,21 +27,18 @@ public class warrior extends character{
     public void moveLeft()
     {
         System.out.println(this.getName()+ " se déplace sur la gauche de façon virile.");
-
     }
 
     @Override
     public void moveForward()
     {
         System.out.println(this.getName()+ " avance de quelques pas de façon virile.");
-
     }
 
     @Override
     public void moveBack()
     {
         System.out.println(this.getName()+ " recule de quelques pas de façon virile.");
-
     }
 
 

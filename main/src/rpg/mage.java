@@ -18,8 +18,9 @@ public class mage extends character {
     }
 
     /** methode**/
+
     @Override
-    public void moveRight()
+    public void moveRight() // adaptation de la methode de deplacement pour le mage
     {
         System.out.println(this.getName()+ " se déplace sur la droite avec agilité.");
     }
@@ -28,24 +29,21 @@ public class mage extends character {
     public void moveLeft()
     {
         System.out.println(this.getName()+ " se déplace sur la gauche avec agilité.");
-
     }
 
     @Override
     public void moveForward()
     {
         System.out.println(this.getName()+ " avance de quelques pas avec agilité.");
-
     }
 
     @Override
     public void moveBack()
     {
         System.out.println(this.getName()+ " recule de quelques pas avec agilité.");
-
     }
     @Override
-    public void attack(String weapon) // méthode attaque réécrite
+    public void attack(String weapon) // méthode attaque réécrite pour le mage
     {
         if (weapon.equals("magic") || weapon.equals("wand")) // test si l'arme utilisée est la bonne
         {
