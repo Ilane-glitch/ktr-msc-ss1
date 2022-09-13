@@ -1,12 +1,13 @@
 package character;
 
 import org.testng.annotations.Test;
+import src.exceptions.weaponException;
 import src.rpg.*;
 
 public class CharacterTest {
 
     @Test
-    public void CTest()
+    public void CTest() // test statistiques du perso
     {
         character c = new character("Jean", "rogue");
         c.attack("fist");
@@ -20,9 +21,8 @@ public class CharacterTest {
         System.out.println(c.getStrength());
         System.out.println(c.getWit());
     }
-
     @Test
-    public void MTest()
+    public void MTest() // test statistiques du mage
     {
         mage m = new mage("Jean", "mage");
         m.attack("wand");
@@ -36,9 +36,8 @@ public class CharacterTest {
         System.out.println(m.getStrength());
         System.out.println(m.getWit());
     }
-
     @Test
-    public void WTest()
+    public void WTest() // test statistique du guerrier
     {
         warrior w = new warrior("Jean", "warrior");
         w.attack("sword");
@@ -52,9 +51,8 @@ public class CharacterTest {
         System.out.println(w.getStrength());
         System.out.println(w.getWit());
     }
-
     @Test
-    public void WalkTest()
+    public void WalkTest() // test marche
     {
         character c = new character();
         c.moveLeft();
@@ -62,9 +60,8 @@ public class CharacterTest {
         c.moveForward();
         c.moveBack();
     }
-
     @Test
-    public void WalkTest_2()
+    public void WalkTest_2() // test marche (cas guerrier/mage)
     {
         mage m = new mage();
         warrior w = new warrior();
@@ -73,14 +70,77 @@ public class CharacterTest {
         w.moveRight();
         w.moveForward();
     }
-
     @Test
-    public void DegTest()
+    public void DegTest() // test degainer arme
     {
         mage m = new mage();
         warrior w = new warrior();
 
         m.degainage();
         w.degainage();
+    }
+
+    @Test
+    public void ExcepMTest() throws weaponException // test Exception arme
+    {
+        mage m = new mage();
+        try // test sans armes
+        {
+            m.tryAtk("");
+        }
+        catch (weaponException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        try  // test avec arme erronée
+        {
+            m.tryAtk("sword");
+        }
+        catch (weaponException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        try  // test avec une bonne arme
+        {
+            m.tryAtk("wand");
+        }
+        catch (weaponException e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Test
+    public void ExcepWTest() throws weaponException // test Exception arme
+    {
+        warrior m = new warrior();
+        try // test sans armes
+        {
+            m.tryAtk("");
+        }
+        catch (weaponException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        try  // test avec arme erronée
+        {
+            m.tryAtk("sword");
+        }
+        catch (weaponException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        try  // test avec une bonne arme
+        {
+            m.tryAtk("wand");
+        }
+        catch (weaponException e)
+        {
+            System.out.println(e.getMessage());
+        }
     }
 }

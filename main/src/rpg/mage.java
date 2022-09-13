@@ -1,5 +1,7 @@
 package src.rpg;
 
+import src.exceptions.weaponException;
+
 public class mage extends character {
 
     /** Constructeur **/
@@ -18,6 +20,16 @@ public class mage extends character {
     }
 
     /** methode**/
+
+    public void tryAtk(String weapon) throws weaponException // methode d'attaque avec utilisation d'exceptions
+    {
+        if (weapon.equals(""))
+            throw new weaponException(this.getName()+ " : Je ne peux pas malheureusement  pas me battre a main nues.");
+        else if (weapon.equals("magic") || weapon.equals("wand")) {
+            System.out.println(this.getName() + ":  utilise " + weapon);
+        }
+        else throw new weaponException(this.getName()+ " : je ne pas me servir de " + weapon + " ...");
+    }
 
     @Override
     public void moveRight() // adaptation de la methode de deplacement pour le mage

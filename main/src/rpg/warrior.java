@@ -1,5 +1,7 @@
 package src.rpg;
 
+import src.exceptions.weaponException;
+
 public class warrior extends character{
 
     /** constructeur**/
@@ -43,6 +45,16 @@ public class warrior extends character{
 
 
     /** metthode **/
+
+    public void tryAtk(String weapon) throws weaponException // methode d'attaque avec utilisation d'exceptions
+    {
+        if (weapon.equals(""))
+            throw new weaponException(this.getName()+ " : Je ne peux pas me battre a main nues.");
+        else if (weapon.equals("hammer") || weapon.equals("sword")) {
+            System.out.println(this.getName() + " : utilise avec force " + weapon);
+        }
+        else throw new weaponException(this.getName()+ " : Tu crois que je vais me battre avec un " + weapon + " ??");
+    }
     @Override
     public void attack(String weapon) // methode attaque rééecrite au besoin
     {
